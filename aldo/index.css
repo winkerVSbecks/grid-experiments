@@ -1,12 +1,21 @@
 .grid { display: grid; }
 
+/**
+ * width = (64rem - 3rem) / 4 = 15.25rem
+ * height = 1000 * 1270 / width = 19.3675rem
+ * @type {[type]}
+ */
+
 .layout {
   grid-gap: 1rem;
   grid-auto-flow: dense;
 
-  grid-template-columns: repeat(4, 16rem);
-  grid-template-rows: repeat(5, 20.32rem);
+  grid-template-columns: repeat(4, 15.25rem);
+  grid-template-rows: repeat(5, 19.3675rem);
+  /*calc(1000 * 1270 / ((64rem - 3rem) / 4) )*/
 }
+
+/*16rem x 20.32rem*/
 
 /*grid-template-columns: repeat(4, 16rem);
 grid-template-rows: repeat(5, 20.32rem);*/
