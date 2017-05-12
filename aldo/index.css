@@ -12,8 +12,11 @@
 
   grid-template-columns: repeat(4, 15.25rem);
   grid-template-rows: repeat(5, 19.3675rem);
-  /*calc(1000 * 1270 / ((64rem - 3rem) / 4) )*/
 }
+
+/*@media screen and (min-width: 30em
+  @media screen and (min-width: 30em) and (max-width: 60em)
+    @media screen and (min-width: 60em)*/
 
 /*16rem x 20.32rem*/
 
