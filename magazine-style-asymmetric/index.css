@@ -1,0 +1,76 @@
+.grid { display: grid; }
+
+.layout--meta { grid-area: meta; }
+.layout--title { grid-area: title; }
+
+.layout--copy1 { grid-area: copy1; }
+.layout--copy2 { grid-area: copy2; }
+.layout--copy3 { grid-area: copy3; }
+
+.layout--media { grid-area: media; }
+.layout--aside { grid-area: aside; }
+
+.layout {
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+  grid-template-areas:
+    "title title title title title title"
+    "meta  meta meta meta meta meta"
+    "copy1 copy1 copy1 copy1 copy1 copy1"
+    "copy2 copy2 copy2 copy2 copy2 copy2"
+    "media media media media media media"
+    "aside aside aside aside aside aside"
+    "copy3 copy3 copy3 copy3 copy3 copy3";
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .layout {
+    grid-template-areas:
+      "meta  meta title title title title"
+      "copy1 copy1 copy1 copy1 copy1 copy1"
+      "copy2 copy2 copy2 copy2 copy2 copy2"
+      "media media media media media media"
+      "aside aside aside aside aside aside"
+      "copy3 copy3 copy3 copy3 copy3 copy3";
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .layout {
+    grid-template-areas:
+      "meta  title title title copy2 copy2"
+      "copy1 copy1 copy1 copy1 copy2 copy2"
+      "copy1 copy1 copy1 copy1 copy2 copy2"
+      "media media media media media media"
+      "aside aside copy3 copy3 copy3 copy3";
+  }
+}
+
+.cols-no-break p,
+.cols-no-break blockquote {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cols--1 { column-count: 1; }
+.cols--2 { column-count: 2; }
+.cols--3 { column-count: 3; }
+
+@media screen and (min-width: 30em) {
+  .cols--1-ns { column-count: 1; }
+  .cols--2-ns { column-count: 2; }
+  .cols--3-ns { column-count: 3; }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .cols--1-m { column-count: 1; }
+  .cols--2-m { column-count: 2; }
+  .cols--3-m { column-count: 3; }
+}
+
+@media screen and (min-width: 60em) {
+  .cols--1-l { column-count: 1; }
+  .cols--2-l { column-count: 2; }
+  .cols--3-l { column-count: 3; }
+}
