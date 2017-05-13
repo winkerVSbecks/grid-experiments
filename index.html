@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Grid Experiments</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+    <style>
+      .grid { display: grid; }
+      .span--full { grid-column: 1 / -1; }
+      .layout {
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        grid-gap: 2rem;
+        grid-auto-rows: minmax(16rem, auto);
+        grid-auto-flow: dense;
+      }
+      .self-justify-stretch { justify-self: stretch; }
+    </style>
   </head>
-  <body>
-    <article class="sans-serif mt5 mw8 center dark-gray ph3">
-      <h2 class="f3 fw8 ttu tracked mt0 mb5 lh-solid">
+  <body class="ph4 sans-serif dark-gray">
+
+    <article class="mw8 center grid layout">
+      <h2 class="f3 fw8 ttu tracked mv0 lh-solid self-center span--full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="dark-gray v-mid dib"
@@ -20,35 +32,26 @@
         Grid Experiments
       </h2>
 
-      <div class="cf">
-        <div class="fl w5 pa3">
-          <a href="magazine-style-asymmetric" class="db link dim tc">
-            <img src="img/magazine-style-asymmetric.png"
-              alt="magazine style asymmetric article layout"
-              class="w-100 db outline black-20"/>
-            <dl class="mt2 f6 lh-copy">
-              <dt class="clip">Title</dt>
-              <dd class="ml0 black truncate w-100">Asymmetric Article Layout</dd>
-              <dt class="clip">Original</dt>
-              <dd class="tl ml0 gray truncate w-100">https://theoutline.com/post/1424/hawaii-s-online-gaming-curse</dd>
-            </dl>
-          </a>
-        </div>
+      <a href="magazine-style-asymmetric" class="link dim self-justify-stretch w-100">
+        <img src="img/magazine-style-asymmetric.png"
+          alt="magazine style asymmetric article layout"
+          class="db outline black-20"/>
+        <h3 class="f5 mb0 dark-gray">Asymmetric Article Layout</h3>
+        <h3 class="mb0 f6 fw4 mt2 black-60 truncate">
+          https://theoutline.com/post/1424/hawaii-s-online-gaming-curse
+        </h3>
+      </a>
 
-        <div class="fl w5 pa3">
-          <a href="aldo" class="db link dim tc">
-            <img src="img/product-grid.png"
-              alt="magazine style asymmetric article layout"
-              class="w-100 db outline black-20"/>
-            <dl class="mt2 f6 lh-copy">
-              <dt class="clip">Title</dt>
-              <dd class="ml0 black truncate w-100">Aldo Product Grid</dd>
-              <dt class="clip">Original</dt>
-              <dd class="tl ml0 gray truncate w-100">www.aldoshoes.com/ca/en/men/laid-back-loafers</dd>
-            </dl>
-          </a>
-        </div>
-      </div>
+      <a href="aldo" class="link dim self-justify-stretch w-100">
+        <img src="img/product-grid.png"
+          alt="Aldo style product grid"
+          class="db outline black-20"/>
+        <h3 class="f5 mb0 dark-gray">Aldo Product Grid</h3>
+        <h3 class="mb0 f6 fw4 mt2 black-60 truncate">
+          www.aldoshoes.com/ca/en/men/laid-back-loafers
+        </h3>
+      </a>
+
     </article>
   </body>
 </html>
