@@ -1,35 +1,29 @@
 .grid { display: grid; }
 
 /**
- * Base = width of grid - (gutters + padding)
- * Width = Base / 4
+ * Grid Layout
+ * Width = (width_of_grid - (gutters + padding)) / no_of_cols
  * Height = 1270 * width / 1000
  */
 :root {
-  --base: calc(100vw - 3rem);
-  --width: calc(var(--base) / 4);
+  --width: calc((100vw - 3rem) / 2);
   --height: calc(1270 * var(--width) / 1000);
 }
 
 .layout {
-  max-width: 64em;
   grid-gap: 1rem;
   grid-auto-flow: dense;
   grid-template-columns: repeat(2, var(--width));
   grid-auto-rows: var(--height);
 }
 
-/*
-@media screen and (min-width: 30em)
-*/
-
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  :root { --base: calc(100vw - 4rem); }
+  :root { --width: calc((100vw - 4rem) / 3); }
   .layout { grid-template-columns: repeat(3, var(--width)); }
 }
 
 @media screen and (min-width: 60em) {
-  :root { --base: calc(60em - 5rem); }
+  :root { --width: calc((60em - 5rem) / 4); }
   .layout { grid-template-columns: repeat(4, var(--width)); }
 }
 
@@ -59,7 +53,6 @@
   .span-2-l { grid-column-end: span 2; }
   .span-3-l { grid-column-end: span 3; }
 }
-
 
 
 .zoom {
