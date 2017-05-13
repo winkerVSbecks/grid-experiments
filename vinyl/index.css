@@ -1,0 +1,20 @@
+.grid { display: grid; }
+
+.layout {
+  grid-template-columns: repeat(auto-fill, 12.5vw);
+  grid-auto-rows: 12.5vw;
+  grid-auto-flow: dense;
+}
+
+/**
+ * Col and row spans
+ */
+.span-1 { grid-column-end: span 1; }
+.span-2 { grid-column-end: span 2; }
+.span-3 { grid-column-end: span 3; }
+.span-4 { grid-column-end: span 4; }
+
+.tall-1 { grid-row-end: span 1; }
+.tall-2 { grid-row-end: span 2; }
+.tall-3 { grid-row-end: span 3; }
+.tall-4 { grid-row-end: span 4; }
