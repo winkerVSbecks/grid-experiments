@@ -1,0 +1,31 @@
+.grid { display: grid; }
+
+.layout {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.x { grid-column: 1 / -1; }
+.y { grid-row: 1 / -1; }
+
+.y1 { grid-row: 1 / 2; }
+.y2 { grid-row: 2 / 3; }
+.y3 { grid-row: 3 / 4; }
+.y4 { grid-row: 4 / 5; }
+.y5 { grid-row: 5 / 6; }
+.y6 { grid-row: 6 / 7; }
+
+.x1 { grid-column: 1 / 2; }
+.x2 { grid-column: 2 / 3; }
+.x3 { grid-column: 3 / 4; }
+.x4 { grid-column: 4 / 5; }
+.x5 { grid-column: 5 / 6; }
+.x6 { grid-column: 6 / 7; }
+.x7 { grid-column: 7 / 8; }
+.x8 { grid-column: 8 / 9; }
+.x9 { grid-column: 9 / 10; }
+.x10 { grid-column: 10 / 11; }
+.x11 { grid-column: 11 / 12; }
+.x12 { grid-column: 12 / 13; }
+
+.right--1 { right: -0.5rem; }

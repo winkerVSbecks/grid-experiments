@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Explainer</title>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body class="vh-100 flex items-center justify-center code">
+  <article class="grid layout vh-75 w-75">
+
+    <div class="f6 f4-ns x y1 bt b--purple">
+      <span class="nl4 nt2 absolute">1</span>
+    </div>
+    <div class="f6 f4-ns x y2 bt b--purple">
+      <span class="nl4 nt2 absolute">2</span>
+    </div>
+    <div class="f6 f4-ns x y3 bt b--purple">
+      <span class="nl4 nt2 absolute">3</span>
+    </div>
+    <div class="f6 f4-ns x y4 bt b--purple">
+      <span class="nl4 nt2 absolute">4</span>
+    </div>
+    <div class="f6 f4-ns x y5 bt b--purple">
+      <span class="nl4 nt2 absolute">5</span>
+    </div>
+    <div class="f6 f4-ns x y6 bt b--purple">
+      <span class="nl4 nt2 absolute">6</span>
+    </div>
+    <div class="f6 f4-ns x y6 bb b--purple relative">
+      <span class="nl4 bottom-0 absolute">7</span>
+    </div>
+
+    <div class="f6 f4-ns y x1 bl b--pink">
+      <span class="nt4 nl1 absolute">1</span>
+    </div>
+    <div class="f6 f4-ns y x2 bl b--pink">
+      <span class="nt4 nl1 absolute">2</span>
+    </div>
+    <div class="f6 f4-ns y x3 bl b--pink">
+      <span class="nt4 nl1 absolute">3</span>
+    </div>
+    <div class="f6 f4-ns y x4 bl b--pink">
+      <span class="nt4 nl1 absolute">4</span>
+    </div>
+    <div class="f6 f4-ns y x5 bl b--pink">
+      <span class="nt4 nl1 absolute">5</span>
+    </div>
+    <div class="f6 f4-ns y x6 bl b--pink">
+      <span class="nt4 nl1 absolute">6</span>
+    </div>
+    <div class="f6 f4-ns y x7 bl b--pink">
+      <span class="nt4 nl1 absolute">7</span>
+    </div>
+    <div class="f6 f4-ns y x8 bl b--pink">
+      <span class="nt4 nl1 absolute">8</span>
+    </div>
+    <div class="f6 f4-ns y x9 bl b--pink">
+      <span class="nt4 nl1 absolute">9</span>
+    </div>
+    <div class="f6 f4-ns y x10 bl b--pink">
+      <span class="nt4 nl1 absolute">10</span>
+    </div>
+    <div class="f6 f4-ns y x11 bl b--pink">
+      <span class="nt4 nl1 absolute">11</span>
+    </div>
+    <div class="f6 f4-ns y x12 bl b--pink">
+      <span class="nt4 nl1 absolute">12</span>
+    </div>
+    <div class="f6 f4-ns y x12 br b--pink relative">
+      <span class="nt4 right--1 absolute">13</span>
+    </div>
+
+    <div class="ba b--green bg-light-green purple
+ bw2 flex items-center justify-center lh-copy f6 f3-l"
+      style="grid-area: 3 / 4 / 5 / 9">
+      col: 4 ➡️ 9<br/>
+      row: 3 ➡️ 5
+    </div>
+
+    <div class="ba b--light-red bg-washed-red purple
+ bw2 flex items-center justify-center lh-copy f6 f3-l"
+      style="grid-area: 1 / -1 / 2 / -7">
+      col: -1 ➡️ -7<br/>
+      row: 1 ➡️ 2
+    </div>
+
+    <div class="ba b--gold bg-washed-yellow purple
+ bw2 flex items-center justify-center lh-copy f6 f3-l"
+      style="grid-area: 6 / 2 / 7 / span 5">
+      col: 2 span 4<br/>
+      row: 6 ➡️ 7
+    </div>
+
+    <div class="ba b--blue bg-washed-blue purple
+ bw2 flex items-center justify-center lh-copy f6 f3-l"
+      style="grid-area: 4 / 8 / 6 / 13">
+      col: 8 ➡️ 13<br/>
+      row: 4 ➡️ 6
+    </div>
+  </article>
+</body>
+</html>
