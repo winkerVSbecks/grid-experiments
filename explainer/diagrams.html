@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Explainer</title>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body class="pv5">
+
+<figure class="mw7 center pa0 flex justify-around flex-wrap ba b--moon-gray">
+  <pre class="f6 lh-solid code">
+Grid Lines
+
+
++---+---+---+---+---+---+ 1
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
++-------+---+-----------+ 2
+|   |xxx|   |   |   |   |
+|   |xxx|<-- Grid Cell  |
+|   |xxx|   |   |   |   |
++-----------------------+ 3
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
++---+---+---+---+---+---+ 4
+1   2   3   4   5   6   7</pre>
+
+  <pre class="f6 lh-solid code">
+Row Tracks
+
+
++---+---+---+---+---+---+
+|xxxxxxxxxxxxxxxxxxxxxxx|
+|xxxxxxxxxxxxxxxxxxxxxxx|
+|xxxxxxxxxxxxxxxxxxxxxxx|
++-----------------------+
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
++-----------------------+
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
++---+---+---+---+---+---+</pre>
+  <pre class="f6 lh-solid code">
+Column Tracks
+
+
++---+---+---+---+---+---+
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
++xxx--------------------+
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
++xxx--------------------+
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
+|xxx|   |   |   |   |   |
++---+---+---+---+---+---+</pre>
+  <figcaption class="clip">The grid gives us numbered lines to use when positioning items. A grid track is the space between any two lines on the grid.</figcaption>
+</figure>
+
+<figure class="mw7 center pa0 flex justify-center ba b--moon-gray">
+  <pre class="f6 lh-solid code">
+Grid Area
+
+
++---+---+---+---+---+---+
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
++---+---+-----------+---+
+|   |   |xxxxxxxxxxx|   |
+|   |   |xxxxxxxxxxx|   |
+|   |   |xxxxxxxxxxx|   |
++---+---+xxxxxxxxxxx+---+
+|   |   |xxxxxxxxxxx|   |
+|   |   |xxxxxxxxxxx|   |
+|   |   |xxxxxxxxxxx|   |
++---+---+---+---+---+---+</pre>
+  <figcaption class="clip">Grid items can span one or more cells both by row or by column this is called a grid area.</figcaption>
+</figure>
+<figure class="mw7 center pa0 flex justify-center ba b--moon-gray">
+  <pre class="f6 lh-solid code">
+Named Areas
+
+
++---+---+---+---+---+---+
+|░░░░░░░░░░░░░░░░░░░░░░░|
+|░░░░░░░ Header ░░░░░░░░|
+|░░░░░░░░░░░░░░░░░░░░░░░|
++-------------------+---+
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░░░|
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░A░|
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░s░|
+|▒▒▒▒▒ Content ▒▒▒▒▒|░i░|
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░d░|
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░e░|
+|▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒|░░░|
++-------------------+---+
+|░░░░░░░░░░░░░░░░░░░░░░░|
+|░░░░░░░ Footer ░░░░░░░░|
+|░░░░░░░░░░░░░░░░░░░░░░░|
++-----------------------+</pre>
+  <figcaption class="clip">Grid items can span one or more cells both by row or by column this is called a grid area. You can also define named areas.</figcaption>
+</figure>
+
+<figure class="mw7 center pa0 flex justify-center ba b--moon-gray">
+  <pre class="f6 lh-solid pa3 code overflow-x-scroll">
+                                +-- grid-column-start
+                                |
+             +-- grid-column +--+
+             |                  |
+             |                  +-- grid-column-end
+grid-area +--+
+             |                  +-- grid-row-start
+             |                  |
+             +-- grid-row +-----+
+                                |
+                                +-- grid-row-end</pre>
+  <figcaption class="clip">Grid area is made up of a grid column and a grid row. Grid column and row both require a start and an end point.</figcaption>
+</figure>
+
+<figure class="mw7 center pa0 flex justify-center ba b--moon-gray">
+  <pre class="f6 lh-solid code overflow-x-scroll">
+Gutters
+
+
++----+ +----+ +----+ +----+
+|    | |    | |    | |    |
+|    | |    | |    | |    |
++----+ +----+ +----+ +----+
++----+ +----+ +----+ +----+
+|    | |    | |    | |    |
+|    | |    | |    | |    |
++----+ +----+ +----+ +----+
++----+ +----+ +----+ +----+
+|    | |    | |    | |    |
+|    | |    | |    | |    |
++----+ +----+ +----+ +----+</pre>
+  <figcaption class="clip">Gutters between grid cells can be created using the grid-gap property.</figcaption>
+</figure>
+
+<figure class="mw7 center pa0 flex justify-around flex-wrap ba b--moon-gray">
+  <pre class="f6 lh-solid code overflow-x-scroll">
+Large-Breakpoint
+(4 columns)
+
+
++-----------+ +-----------+
+|  span 2   | |           |
+|           | |           |
++-----------+ |   span 2  |
++----+ +----+ |   tall 2  |
+|    | |    | |           |
+|    | |    | |           |
++----+ +----+ +-----------+
++----+ +----+ +----+ +----+
+|    | |    | |    | |    |
+|    | |    | |    | |    |
++----+ +----+ +----+ +----+
++-----------+ +----+ +----+
+|           | |    | |    |
+|           | |    | |    |
+|  span 2   | +----+ +----+
+|  tall 2   | +----+ +----+
+|           | |    | |    |
+|           | |    | |    |
++-----------+ +----+ +----+</pre>
+
+  <pre class="f6 lh-solid code overflow-x-scroll">
+Medium-Breakpoint
+(3 columns)
+
+
++------------------+
+|      span 3      |
+|                  |
++------------------+
++-----------+ +----+
+|           | |    |
+|           | |    |
+|  span 2   | +----+
+|  tall 2   | +----+
+|           | |    |
+|           | |    |
++-----------+ +----+
++----+ +----+ +----+
+|    | |    | |    |
+|    | |    | |    |
++----+ +----+ +----+
++-----------+ +----+
+|           | |    |
+|           | |    |
+|  span 2   | +----+
+|  tall 2   | +----+
+|           | |    |
+|           | |    |
++-----------+ +----+
++----+ +----+ +----+
+|    | |    | |    |
+|    | |    | |    |
++----+ +----+ +----+</pre>
+  <pre class="f6 lh-solid code overflow-x-scroll">
+Small-Breakpoint
+(2 columns)
+
+
++-----------+
+|  span 2   |
+|           |
++-----------+
++-----------+
+|           |
+|           |
+|  span 2   |
+|  tall 2   |
+|           |
+|           |
++-----------+
++----+ +----+
+|    | |    |
+|    | |    |
++----+ +----+
++----+ +----+
+|    | |    |
+|    | |    |
++----+ +----+
++----+ +----+
+|    | |    |
+|    | |    |
++----+ +----+
++-----------+
+|           |
+|           |
+|  span 2   |
+|  tall 2   |
+|           |
+|           |
++-----------+
++----+ +----+
+|    | |    |
+|    | |    |
++----+ +----+
++----+ +----+
+|    | |    |
+|    | |    |
++----+ +----+</pre>
+  <figcaption class="clip">Gutters between grid cells can be created using the grid-gap property.</figcaption>
+</figure>
+
+</body>
+</html>
