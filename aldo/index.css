@@ -30,28 +30,28 @@
 /**
  * Col and row spans
  */
-.span-1 { grid-column-end: span 1; }
-.span-2 { grid-column-end: span 2; }
+.wide-1 { grid-column-end: span 1; }
+.wide-2 { grid-column-end: span 2; }
 
 .tall-1 { grid-row-end: span 1; }
 .tall-2 { grid-row-end: span 2; }
 
 @media screen and (min-width: 30em) {
-  .span-1-ns { grid-column-end: span 1; }
-  .span-2-ns { grid-column-end: span 2; }
-  .span-3-ns { grid-column-end: span 3; }
+  .wide-1-ns { grid-column-end: span 1; }
+  .wide-2-ns { grid-column-end: span 2; }
+  .wide-3-ns { grid-column-end: span 3; }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  .span-1-m { grid-column-end: span 1; }
-  .span-2-m { grid-column-end: span 2; }
-  .span-3-m { grid-column-end: span 3; }
+  .wide-1-m { grid-column-end: span 1; }
+  .wide-2-m { grid-column-end: span 2; }
+  .wide-3-m { grid-column-end: span 3; }
 }
 
 @media screen and (min-width: 60em) {
-  .span-1-l { grid-column-end: span 1; }
-  .span-2-l { grid-column-end: span 2; }
-  .span-3-l { grid-column-end: span 3; }
+  .wide-1-l { grid-column-end: span 1; }
+  .wide-2-l { grid-column-end: span 2; }
+  .wide-3-l { grid-column-end: span 3; }
 }
 
 

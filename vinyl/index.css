@@ -9,10 +9,10 @@
 /**
  * Col and row spans
  */
-.span-1 { grid-column-end: span 1; }
-.span-2 { grid-column-end: span 2; }
-.span-3 { grid-column-end: span 3; }
-.span-4 { grid-column-end: span 4; }
+.wide-1 { grid-column-end: span 1; }
+.wide-2 { grid-column-end: span 2; }
+.wide-3 { grid-column-end: span 3; }
+.wide-4 { grid-column-end: span 4; }
 
 .tall-1 { grid-row-end: span 1; }
 .tall-2 { grid-row-end: span 2; }
