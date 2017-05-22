@@ -10,96 +10,67 @@
   <body>
     <article class="dark-gray sans-serif grid layout">
 
+      <aside class="wide--full grid summary-layout bg-near-black white mt pv4">
+        <!-- match date -->
+        <time datetime="2017-02-26" class="j-self-end wide-2 f7 ttu b">SUN, 26 Feb 2017</time>
+        <!-- match type -->
+        <span class="wide-2 f7 ttu">EFL Cup - Final</span>
 
-      <aside>
-        <time datetime="2017-02-26">SUN, 26 Feb 2017</time>
-        | EFL Cup - Final
-        <h1 class="lh-solid flex items-center">
-          <div class="w-50 tr mr1">
-            <abbr class="fw4" title="Manchester United">
-              Manchester United<span class="dn">Man Utd</span>
-            </abbr>
-            <span class="dib w2 h2 pa2 tc bg-yellow dark-gray">3</span>
-          </div>
-          <div class="w-50 ml1">
-            <span class="dib w2 h2 pa2 tc bg-yellow dark-gray">2</span>
-            <abbr class="fw4" title="Southampton">Southampton</abbr>
-          </div>
-        </h1>
-        <ul>
-          <li>
-            <span>Ibrahimovic</span>
-            <span> (</span>
-            <span>
-              <span>19'</span>
-              <span class="clip"> minutes</span>
-              <span></span>
-            </span>
-            <span>, </span>
-            <span><span>87'</span>
-            <span class="clip"> minutes</span>
-            <span></span></span>
-            <span>)</span>
-            <span>,&nbsp;</span>
+        <!-- Home Team Name -->
+        <abbr title="Manchester United" class="j-self-end self-center f3">
+          Manchester United<span class="dn">Man Utd</span>
+        </abbr>
+        <!-- Home Team Goals -->
+        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f3 pv2 ph3">3</span>
+        <!-- Away Team Goals -->
+        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f3 pv2 ph3">2</span>
+        <!-- Away Team Name -->
+        <abbr title="Southampton" class="self-center f3">Southampton</abbr>
+
+        <!-- Home info -->
+        <ul class="ph0 mv0 list j-self-end f6">
+          <li class="dib">
+            Ibrahimovic
+            (19'<span class="clip"> minutes</span>,
+            87'<span class="clip"> minutes</span>),
           </li>
-          <li>
-            <span>Lingard</span>
-            <span> (</span>
-            <span>
-              <span>38'</span>
-              <span class="clip"> minutes</span>
-              <span></span>
-            </span>
-            <span>)</span>
-            <span></span>
+          <li class="dib">
+            Lingard
+            (38'<span class="clip"> minutes</span>)
           </li>
         </ul>
-        <ul>
-          <li>
-            <span>Gabbiadini</span>
-            <span> (</span>
-            <span>
-              <span>45'+1</span>
-              <span class="clip"> minutes</span>
-              <span></span>
-            </span>
-            <span>, </span>
-            <span>
-              <span>48'</span>
-              <span class="clip"> minutes</span>
-              <span></span>
-            </span>
-            <span>)</span>
-            <span></span>
+        <!-- Clock & HT score -->
+        <div class="wide-2 tc">
+          <abbr title="Full Time" class="db yellow f7 mb2">FT</abbr>
+          <div class="f7">
+            <abbr title="Half Time">HT</abbr>
+            2 - 1
+          </div>
+        </div>
+        <!-- Away info -->
+        <ul class="ph0 mv0 list f6">
+          <li class="dib">
+            Gabbiadini
+            (45'+1<span class="clip"> minutes</span>,
+            48'<span class="clip"> minutes</span>)
           </li>
         </ul>
-
-        <span>
-          <span>
-            <span data-reactid=".u5bddqjbpc.0:0.0.0.0.2.1.0.0"></span>
-            <abbr title="Full Time" data-reactid=".u5bddqjbpc.0:0.0.0.0.2.1.0.2">FT</abbr>
-          </span>
-          <span>
-            <span>
-              <abbr title="Half Time">HT</abbr>
-              <span> </span>
-              <span>2</span>
-              <span>-</span>
-              <span >1</span>
-            </span>
-          </span>
-        </span>
       </aside>
-      <header class="wide-5 cover bg-top white vh-50"
+
+      <header class="wide--full cover bg-top white vh-50 relative inset-shadow flex items-end"
         style="background-image: url('../img/united.jpg')">
-        <h1>EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
-        <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor">
-          <polygon points="17,15.4 17,6 15,6 15,16.6 23.8,21.7 24.8,19.9"></polygon>
-          <path d="M16,4c6.6,0,12,5.4,12,12c0,6.6-5.4,12-12,12S4,22.6,4,16C4,9.4,9.4,4,16,4 M16,0C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16 s16-7.2,16-16C32,7.2,24.8,0,16,0L16,0z"></path>
-        </svg>
-        <time datetime="2017-02-26T14:00:00+00:00">
-          26 Feb 201726 Feb 2017
-        </time>
+        <div class="z-1 pa4">
+          <h1 class="mt0 mb2">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
+          <div class="flex items-center">
+            <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" class="dib mr2">
+              <polygon points="17,15.4 17,6 15,6 15,16.6 23.8,21.7 24.8,19.9"></polygon>
+              <path d="M16,4c6.6,0,12,5.4,12,12c0,6.6-5.4,12-12,12S4,22.6,4,16C4,9.4,9.4,4,16,4 M16,0C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16 s16-7.2,16-16C32,7.2,24.8,0,16,0L16,0z"></path>
+            </svg>
+            <time datetime="2017-02-26T14:00:00+00:00" class="f6">
+              26 Feb 201726 Feb 2017
+            </time>
+          </div>
+        </div>
       </header>
 
     </article>
