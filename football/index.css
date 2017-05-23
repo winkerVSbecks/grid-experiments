@@ -1,49 +1,84 @@
-.summary-layout {
+/**
+ * Layout for the entire page
+ */
+.layout {
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr repeat(4, 18rem) 1fr;
+  grid-template-areas:
+    "🎛️ 🎛️ 🎛️ 🎛️ 🎛️ 🎛️"
+    "👀 👀 👀 👀 👀 👀"
+    "🎩 🎩 🎩 🎩 🎩 🎩"
+    ".  📝 📻 📻 📊 .";
+}
+
+/**
+ * areas
+ */
+.a-🎛️ { grid-area: 🎛️; }
+.a-👀 { grid-area: 👀; }
+.a-🎩 { grid-area: 🎩; }
+.a-📝 { grid-area: 📝; }
+.a-📻 { grid-area: 📻; }
+.a-📊 { grid-area: 📊; }
+
+
+/**
+ * Layout for overview
+ */
+.overview-layout {
   grid-template-columns: 1fr auto auto 1fr;
   grid-gap: 0.5rem;
 }
 
-.layout {
-  grid-column-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  /*grid-auto-rows: var(--height);*/
-}
 
+/**
+ * Uitls
+ */
 abbr[title] { text-decoration: none; }
 .grid { display: grid; }
 .j-self-end { justify-self: end; }
 .j-self-center { justify-self: center; }
+.list--square { list-style-type: square; }
 
+/**
+ * Offsets
+ */
+.ho1 { grid-column-start: 2; }
+.ho2 { grid-column-start: 3; }
+.ho3 { grid-column-start: 4; }
+.ho4 { grid-column-start: 5; }
+.ho5 { grid-column-start: 6; }
 
 /**
  * Col and row spans
  */
-.wide-1 { grid-column-end: span 1; }
-.wide-2 { grid-column-end: span 2; }
-.wide-3 { grid-column-end: span 3; }
-.wide-4 { grid-column-end: span 4; }
-.wide-5 { grid-column-end: span 5; }
-.wide--full { grid-column: 1 / -1; }
+.hs1 { grid-column-end: span 1; }
+.hs2 { grid-column-end: span 2; }
+.hs3 { grid-column-end: span 3; }
+.hs4 { grid-column-end: span 4; }
+.hs5 { grid-column-end: span 5; }
+.hs--end { grid-column-end: -1; }
+.hs--full { grid-column: 1 / -1; }
 
-.tall-1 { grid-row-end: span 1; }
-.tall-2 { grid-row-end: span 2; }
+.vs1 { grid-row-end: span 1; }
+.vs2 { grid-row-end: span 2; }
 
 @media screen and (min-width: 30em) {
-  .wide-1-ns { grid-column-end: span 1; }
-  .wide-2-ns { grid-column-end: span 2; }
-  .wide-3-ns { grid-column-end: span 3; }
+  .hs1-ns { grid-column-end: span 1; }
+  .hs2-ns { grid-column-end: span 2; }
+  .hs3-ns { grid-column-end: span 3; }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  .wide-1-m { grid-column-end: span 1; }
-  .wide-2-m { grid-column-end: span 2; }
-  .wide-3-m { grid-column-end: span 3; }
+  .hs1-m { grid-column-end: span 1; }
+  .hs2-m { grid-column-end: span 2; }
+  .hs3-m { grid-column-end: span 3; }
 }
 
 @media screen and (min-width: 60em) {
-  .wide-1-l { grid-column-end: span 1; }
-  .wide-2-l { grid-column-end: span 2; }
-  .wide-3-l { grid-column-end: span 3; }
+  .hs1-l { grid-column-end: span 1; }
+  .hs2-l { grid-column-end: span 2; }
+  .hs3-l { grid-column-end: span 3; }
 }
 
 .inset-shadow:before {
