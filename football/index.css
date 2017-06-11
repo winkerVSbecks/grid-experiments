@@ -1,20 +1,21 @@
 /**
- * Layout for the entire page
+ * Main layout for the entire page
  */
-.layout {
+.matchday {
   grid-column-gap: 1rem;
   grid-template-columns: 1fr repeat(4, 18rem) 1fr;
   grid-template-areas:
-    "🎛️ 🎛️ 🎛️ 🎛️ 🎛️ 🎛️"
+    "⛵ ⛵ ⛵ ⛵ ⛵ ⛵"
     "👀 👀 👀 👀 👀 👀"
     "🎩 🎩 🎩 🎩 🎩 🎩"
-    ".  📝 📻 📻 📊 .";
+    ". 📝 📻 📻 📊 .";
 }
+.content-measure { width: 75rem; }
 
 /**
  * areas
  */
-.a-🎛️ { grid-area: 🎛️; }
+.a-⛵ { grid-area: ⛵; }
 .a-👀 { grid-area: 👀; }
 .a-🎩 { grid-area: 🎩; }
 .a-📝 { grid-area: 📝; }
@@ -25,9 +26,17 @@
 /**
  * Layout for overview
  */
-.overview-layout {
+.overview {
   grid-template-columns: 1fr auto auto 1fr;
   grid-gap: 0.5rem;
+}
+
+/**
+ * Layout for commentary post
+ */
+.post {
+  grid-template-columns: 4rem 1fr;
+  grid-column-gap: 1rem;
 }
 
 
@@ -39,6 +48,7 @@ abbr[title] { text-decoration: none; }
 .j-self-end { justify-self: end; }
 .j-self-center { justify-self: center; }
 .list--square { list-style-type: square; }
+.sticky { position: sticky; }
 
 /**
  * Offsets

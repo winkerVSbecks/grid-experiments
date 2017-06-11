@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aldo Product Grid</title>
+    <title>Live Football</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="index.css"/>
   </head>
   <body>
-    <main class="dark-gray sans-serif grid layout">
+    <main class="dark-gray sans-serif grid matchday">
 
-      <nav class="a-🎛️ bg-yellow h3">NAV</nav>
+      <nav class="a-⛵ bg-yellow pa3 flex items-baseline">
+        <div class="content-measure center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 30" width="120" class="dark-gray">
+            <path fill="currentColor" d="M8.5 17.4l-3.1-1.9c-2-1.2-3.4-2.4-4.2-3.6C.4 10.7 0 9.3 0 7.8c0-2.3.8-4.2 2.4-5.6C3.9.8 6 0 8.5 0c2.4 0 4.6.7 6.6 2.1v4.8c-2.1-2-4.3-3-6.7-3-1.4-.1-2.5.2-3.3.9-.9.6-1.3 1.4-1.3 2.4 0 .9.3 1.7 1 2.5.6.8 1.7 1.6 3.1 2.4L11 14c3.5 2.1 5.3 4.8 5.3 8.1 0 2.3-.8 4.2-2.3 5.7-1.5 1.5-3.5 2.2-6 2.2-2.8 0-5.4-.9-7.7-2.7V22c2.2 2.9 4.8 4.3 7.7 4.3 1.3 0 2.4-.4 3.2-1.1.9-.7 1.3-1.6 1.3-2.7-.2-1.8-1.4-3.5-4-5.1zm12 12.3V.4h9.1c2.7 0 4.9.8 6.6 2.3 1.6 1.5 2.4 3.5 2.4 6.1 0 1.7-.4 3.2-1.3 4.5-.8 1.3-2 2.3-3.4 2.9-1.5.6-3.5.9-6.2.9h-3v12.7h-4.2zm8.4-25.6h-4.3v9.1h4.5c1.7 0 3-.4 3.9-1.2.9-.8 1.4-2 1.4-3.4-.1-3-1.9-4.5-5.5-4.5zM56.3 0c4.4 0 8.1 1.4 11.1 4.3s4.4 6.4 4.4 10.8c0 4.3-1.5 7.9-4.5 10.7-3 2.8-6.7 4.2-11.3 4.2-4.3 0-7.9-1.4-10.8-4.2-2.9-2.8-4.3-6.4-4.3-10.6 0-4.4 1.5-8 4.4-10.8 2.9-3 6.5-4.4 11-4.4zm.1 4c-3.3 0-6 1-8.1 3.1-2.1 2.1-3.2 4.8-3.2 8s1.1 5.8 3.2 7.9c2.1 2.1 4.8 3.1 8 3.1s5.9-1.1 8-3.2c2.1-2.1 3.2-4.8 3.2-8 0-3.1-1.1-5.7-3.2-7.8C62.2 5 59.6 4 56.4 4zm20.5 25.7V.4h7.2c2.9 0 5.2.7 6.9 2.2 1.7 1.5 2.6 3.4 2.6 5.9 0 1.7-.4 3.2-1.3 4.4-.8 1.2-2 2.2-3.6 2.8.9.6 1.8 1.5 2.7 2.5.9 1.1 2.1 2.9 3.7 5.5 1 1.7 1.8 2.9 2.4 3.7l1.5 2.1h-4.9l-1.3-1.9c0-.1-.1-.2-.2-.4l-.8-1.2-1.3-2.1-1.4-2.3c-.8-1.2-1.6-2.2-2.3-2.9-.7-.7-1.3-1.2-1.9-1.5-.6-.3-1.5-.5-2.9-.5h-1.1v12.7h-4zM82.3 4h-1.2v9.2h1.6c2.1 0 3.5-.2 4.3-.5.8-.4 1.4-.9 1.8-1.6.4-.7.6-1.6.6-2.5 0-.9-.2-1.8-.7-2.5-.5-.7-1.2-1.3-2-1.6-1-.4-2.4-.5-4.4-.5zM96 .4h24v3.7h-10v25.6h-4.1V4.1H96V.4z" />
+          </svg>
+          <a href="/sport/football" class="dark-gray link f3 ttu fw5 ml3">Football  </a>
+        </div>
+      </nav>
 
-      <aside class="a-👀 grid overview-layout bg-near-black white mt pv4">
+      <aside class="a-👀 grid overview bg-near-black white mt pv4">
         <!-- match date -->
         <time datetime="2017-02-26" class="j-self-end hs2 f7 ttu b">SUN, 26 Feb 2017</time>
         <!-- match type -->
@@ -59,26 +66,27 @@
         </ul>
       </aside>
 
-      <div class="a-🎩 cover bg-top relative white vh-50 inset-shadow pb5"
+      <header class="a-🎩 cover bg-top relative white vh-50 inset-shadow flex items-end"
         style="background-image: url('../img/united.jpg');">
-      </div>
 
-      <header class="a-🎩 ho2 white flex items-end pb5">
-        <div class="z-1 pa4">
-          <h1 class="mt0 mb2">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
-          <div class="flex items-center">
-            <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" class="dib mr2">
-              <polygon points="17,15.4 17,6 15,6 15,16.6 23.8,21.7 24.8,19.9"></polygon>
-              <path d="M16,4c6.6,0,12,5.4,12,12c0,6.6-5.4,12-12,12S4,22.6,4,16C4,9.4,9.4,4,16,4 M16,0C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16 s16-7.2,16-16C32,7.2,24.8,0,16,0L16,0z"></path>
-            </svg>
-            <time datetime="2017-02-26T14:00:00+00:00" class="f6">
-              26 Feb 201726 Feb 2017
-            </time>
+        <div class="a-🎩 content-measure center ho1 white flex items-end pb5">
+          <div class="z-1">
+            <h1 class="mt0 mb2 w-80">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
+            <div class="flex items-center">
+              <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" class="dib mr2 f7">
+                <polygon points="17,15.4 17,6 15,6 15,16.6 23.8,21.7 24.8,19.9"></polygon>
+                <path d="M16,4c6.6,0,12,5.4,12,12c0,6.6-5.4,12-12,12S4,22.6,4,16C4,9.4,9.4,4,16,4 M16,0C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16 s16-7.2,16-16C32,7.2,24.8,0,16,0L16,0z"></path>
+              </svg>
+              <time datetime="2017-02-26T14:00:00+00:00" class="f7">
+                26 Feb 2017
+              </time>
+            </div>
           </div>
         </div>
+
       </header>
 
-      <aside class="a-📝 bg-near-white bt b--blue bw2 ph3 nt4 z-1">
+      <aside class="a-📝 bg-near-white nt4 z-1 bt b--blue bw2 ph3 mt4 top-1 self-start sticky">
         <h2 class="fw4 f4">Summary</h2>
         <ul class="list--square pl3 f6">
           <li class="mb2">Listen on BBC Radio 5 live using the audio button</li>
@@ -90,18 +98,110 @@
         </ul>
       </aside>
 
-      <article class="a-📻 bg-white nt4 z-1 ph3">
+      <section class="a-📻 bg-white nt4 z-1 ph3 lh-copy mb4">
         <header class="bb b--moon-gray pb3">
           <h2 class="mb3 fw4 f4">Live Reporting</h2>
           <p class="f6 mb0 flex items-end">By Shamoon Hafez
             <span class="flex-auto"></span>
-            <button class="justify-end bg-blue w4 h2 bn b white">Get involved</button>
+            <button class="justify-end bg-dark-blue w4 h2 bn b white">Get involved</button>
           </p>
         </header>
-      </article>
+
+        <article class="grid post pt4 pb3 bb b--moon-gray">
+          <time class="f6 tr">
+            <span class="clip">Posted at</span>
+            <div>14:20</div>
+            <div>26 Feb</div>
+          </time>
+          <header>
+            <h2 class="mt0 mb1">Goodbye</h2>
+            <p class="mv0">Man Utd 3-2 Southampton</p>
+          </header>
+          <div class="ho1">
+            <p>One of THE great cup finals.</p>
+
+            <ul class="pl4">
+              <li>Jose Mourinho joins legends Sir Alex Ferguson and Brian Clough in winning the League Cup four times.</li>
+              <li>Mourinho becomes the first Manchester United manager to win a major trophy in his first season.</li>
+              <li>Mourinho keeps up a 100% winning record in English domestic finals.</li>
+            </ul>
+            <p>But it is Zlatan Ibrahimovic's name which will be at the top of the headlines after the Swede scored twice, including a late winner, to give United victory over Southampton.</p>
+
+            <p><a class="link bb b--moon-gray b dark-gray" href="http://www.bbc.co.uk/sport/football/39018813" alt="Have a read of Phil McNulty's match report from Wembley">Have a read of Phil McNulty's match report from Wembley</a></p>
+
+            <p>We are back on Monday for Premier League action as champions Leicester take on Liverpool.</p>
+
+            <p>Until then.</p>
+          </div>
+
+        </article>
+      </section>
 
       <aside class="a-📊 bg-white ph3 nt4 z-1">
         <h2 class="fw4 f4">Match Stats</h2>
+        <div class="flex items-center justify-center">
+          <span class="clip">Home Team</span><span class="w1 h1 dib bg-dark-blue mr2"></span>
+          <span class="mr3">Man Utd</span>
+          <span class="clip">Away Team</span><span class="w1 h1 dib bg-blue mr2"></span> Southampton
+        </div>
+
+        <dl class="tc lh-copy">
+          <dl>
+            <dt class="b mb1">Possession</dt>
+            <dd class="dib ml0 bg-dark-blue white br bw1 pv1 fl tl pl2" style="width:48.3%;">
+              <span class="clip">Home</span>
+              <span>48%</span>
+            </dd>
+            <dd class="dib ml0 bg-blue white pv1 tr pr2" style="width:51.7%;">
+              <span class="clip">Away</span>
+              <span>52%</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="b mb1">Shots</dt>
+            <dd class="dib ml0 bg-dark-blue white br bw1 pv1 fl tl pl2" style="width:45.45454545454545%;">
+              <span class="clip">Home</span>
+              <span>10</span>
+            </dd>
+            <dd class="dib ml0 bg-blue white pv1 tr pr2" style="width:54.54545454545454%;">
+              <span class="clip">Away</span>
+              <span>12</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="b mb1">Shots on Target</dt>
+            <dd class="dib ml0 bg-dark-blue white br bw1 pv1 fl tl pl2" style="width:54.54545454545454%;">
+              <span class="clip">Home</span>
+              <span>6</span>
+            </dd>
+            <dd class="dib ml0 bg-blue white pv1 tr pr2" style="width:45.45454545454545%;">
+              <span class="clip">Away</span>
+              <span>5</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="b mb1">Corners</dt>
+            <dd class="dib ml0 bg-dark-blue white br bw1 pv1 fl tl pl2" style="width:20%;">
+              <span class="clip">Home</span>
+              <span>3</span>
+            </dd>
+            <dd class="dib ml0 bg-blue white pv1 tr pr2" style="width:80%;">
+              <span class="clip">Away</span>
+              <span>12</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="b mb1">Fouls</dt>
+            <dd class="dib ml0 bg-dark-blue white br bw1 pv1 fl tl pl2" style="width:45.83333333333333%;">
+              <span class="clip">Home</span>
+              <span>11</span>
+            </dd>
+            <dd class="dib ml0 bg-blue white pv1 tr pr2" style="width:54.166666666666664%;">
+              <span class="clip">Away</span>
+              <span>13</span>
+            </dd>
+          </dl>
+        </dl>
       </aside>
     </main>
   </body>
