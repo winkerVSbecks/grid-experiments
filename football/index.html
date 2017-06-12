@@ -30,25 +30,26 @@
         </div>
       </nav>
 
-      <aside class="a-⚽️ grid overview bg-near-black white mt pv4">
+      <aside class="a-⚽️ grid overview bg-near-black white mt pv4 ph3 ph0-l lh-copy">
         <!-- match date -->
         <time datetime="2017-02-26" class="j-self-end hs2 f7 ttu b">SUN, 26 Feb 2017</time>
         <!-- match type -->
         <span class="hs2 f7 ttu">EFL Cup - Final</span>
 
         <!-- Home Team Name -->
-        <abbr title="Manchester United" class="j-self-end self-center f3">
-          Manchester United<span class="dn">Man Utd</span>
+        <abbr title="Manchester United" class="j-self-end self-center f4 f3-ns">
+          <span class="dn dn-m di-l">Manchester United</span>
+          <span class="di di-m dn-l">Man Utd</span>
         </abbr>
         <!-- Home Team Goals -->
-        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f3 pv2 ph3">3</span>
+        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f4 f3-ns pv0 pv2-ns ph2 ph3-ns">3</span>
         <!-- Away Team Goals -->
-        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f3 pv2 ph3">2</span>
+        <span class="dib bg-yellow dark-gray fw8 lh-solid tc self-center h2 flex items-center justify-center f4 f3-ns pv0 pv2-ns ph2 ph3-ns">2</span>
         <!-- Away Team Name -->
-        <abbr title="Southampton" class="self-center f3">Southampton</abbr>
+        <abbr title="Southampton" class="self-center f4 f3-ns">Southampton</abbr>
 
         <!-- Home info -->
-        <ul class="ph0 mv0 list j-self-end f6">
+        <ul class="ph0 mv0 list j-self-end f6 tr">
           <li class="dib">
             Ibrahimovic
             (19'<span class="clip"> minutes</span>,
@@ -77,12 +78,13 @@
         </ul>
       </aside>
 
-      <header class="a-🖼 cover bg-top relative white vh-50 inset-shadow flex items-end"
+      <!-- Media Section -->
+      <header class="a-🖼 cover bg-top relative white vh-50 inset-shadow-ns flex items-end"
         style="background-image: url('../img/united.jpg');">
 
-        <div class="a-🎩 content-measure center ho1 white flex items-end pb6">
-          <div class="z-1">
-            <h1 class="mt0 mb2 w-80">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
+        <div class="a-🎩 content-measure center ho1 white flex items-end ph3 ph0-l pb5-l">
+          <div class="z-1 pa4 nl3 nr3 bg-near-black bg-transparent-ns">
+            <h1 class="mt0 mb2 w-80-l f3 f2-ns lh-title">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
             <div class="flex items-center">
               <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" class="dib mr2 f7">
                 <polygon points="17,15.4 17,6 15,6 15,16.6 23.8,21.7 24.8,19.9"></polygon>
@@ -97,32 +99,65 @@
 
       </header>
 
-      <aside class="a-👀 bg-near-white nt5-l z-1 bt b--blue bw2 ph3 pb3 mt4 top-1 self-start sticky-l sticky-xl">
+      <!-- Summary -->
+      <aside class="a-👀 bg-near-white nt5-l z-1 bt b--blue bw2 ph3 pb3 top-1 self-start sticky-l sticky-xl">
         <h2 class="fw4 f4">Summary</h2>
-        <ul class="list--square pl3 f6 lh-copy">
+        <ul class="list--square pl3 f6 lh-copy mv0">
           <li class="mb2">Listen on BBC Radio 5 live using the audio button</li>
           <li class="mb2">Ibrahimovic heads in for late Man Utd glory</li>
           <li class="mb2">Gabbiadini had scored twice to bring Saints back to 2-2</li>
           <li class="mb2">Lingard and Ibrahimovic gave United 2-0 lead</li>
           <li class="mb2">Mourinho could become first Man Utd boss to win trophy in first season</li>
-          <li class="mb3">Southampton looking for first major trophy since 1976</li>
+          <li class="mb0">Southampton looking for first major trophy since 1976</li>
         </ul>
       </aside>
 
-      <section class="a-🗂 a-📻-xl bg-white nt5-l z-2 lh-copy mb4">
-        <header class="bb b--moon-gray pa3">
-          <h2 class="mv0 fw4 f4">Live Reporting</h2>
+      <!-- Tab Navigation for when content is collapsed -->
+      <section class="a-📋 dn-xl nt5-l z-1 lh-copy">
+        <ul role="tablist" class="list pl0 mv0 flex">
+          <li role="presentation" class="flex-auto mr2">
+            <button role="tab" aria-selected="true" aria-controls="tab-live-reporting" tabindex="0"
+              onclick="activateTab('tab-live-reporting')"
+              id="js-reporting-btn"
+              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-white bt bw2 b--blue">
+              Live Reporting
+            </button>
+          </li>
+          <li role="presentation" class="flex-auto mr2">
+            <button role="tab" aria-selected="false" aria-controls="tab-match-stats" tabindex="-1"
+              onclick="activateTab('tab-match-stats')"
+              id="js-stats-btn"
+              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-light-gray bt-0">
+              Match Stats
+            </button>
+          </li>
+          <li role="presentation" class="flex-auto mr2">
+            <button role="tab" aria-selected="false" aria-controls="tab-line-ups" tabindex="-1"
+              onclick="activateTab('tab-line-ups')"
+              id="js-line-ups-btn"
+              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-light-gray bt-0">
+              Line-ups
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Live Reporting -->
+      <section class="a-📋 a-📻-xl bg-white nt5-xl z-2 lh-copy mb4" id="js-reporting"
+        aria-labelledby="tab-live-reporting" role="tabpanel">
+        <header class="bb-xl b--moon-gray ph3 pb3 pt0 pt3-xl">
+          <h2 class="mv0 fw4 f4 dn db-xl">Live Reporting</h2>
           <p class="f6 mb0 flex items-end">By Shamoon Hafez
             <span class="flex-auto"></span>
             <button class="justify-end bg-dark-blue w4 h2 bt-0 bl-0 br-0 b bw1 white bb b--navy grow pointer">Get involved</button>
           </p>
         </header>
 
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>14:20</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">14:20</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -139,18 +174,18 @@
             </ul>
             <p>But it is Zlatan Ibrahimovic's name which will be at the top of the headlines after the Swede scored twice, including a late winner, to give United victory over Southampton.</p>
 
-            <p><a class="link dim bb b--moon-gray b dark-gray" href="http://www.bbc.co.uk/sport/football/39018813" alt="Have a read of Phil McNulty's match report from Wembley">Have a read of Phil McNulty's match report from Wembley</a></p>
+            <p><a class="link hover-blue bb b--moon-gray b dark-gray" href="http://www.bbc.co.uk/sport/football/39018813" alt="Have a read of Phil McNulty's match report from Wembley">Have a read of Phil McNulty's match report from Wembley</a></p>
 
             <p>We are back on Monday for Premier League action as champions Leicester take on Liverpool.</p>
 
             <p>Until then.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:49</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:49</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -160,11 +195,11 @@
             <p><img src="../img/pogba.jpg" alt="Paul Pogba celebrates" /></p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:46</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:46</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="pb3">
             <header>
@@ -181,11 +216,11 @@
             <p>The way he used all of his experience - not just in his two goals but everywhere on the pitch, he deserves that Man of the Match trophy.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4 bg-lightest-blue">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4 bg-lightest-blue">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:37</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:37</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="pb3">
             <header class="flex items-start">
@@ -205,11 +240,11 @@
             <p><img src="../img/trophy.jpg" alt="Wayne Rooney" /></p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:35</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:35</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -219,11 +254,11 @@
             <p>Surprise, surprise.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:28</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:28</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -236,11 +271,11 @@
             <p>Big game player.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:23</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:23</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -252,10 +287,10 @@
             <p><img src="../img/full-time.jpg" alt="Manchester United celebrate" /></p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+4 mins</div>
+            <span class="di db-ns">90+4 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -265,10 +300,10 @@
             <p>Time is up.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+3 mins</div>
+            <span class="di db-ns">90+3 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -280,10 +315,10 @@
             <p>United almost there.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+3 mins</div>
+            <span class="di db-ns">90+3 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -292,10 +327,10 @@
             <p>Can Southampton take it into extra time???</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+3 mins</div>
+            <span class="di db-ns">90+3 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -304,10 +339,10 @@
             <p>INTO THE LAST MINUTE.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+2 mins</div>
+            <span class="di db-ns">90+2 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -317,10 +352,10 @@
             <p>Eats away a few more seconds.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+2 mins</div>
+            <span class="di db-ns">90+2 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -331,10 +366,10 @@
             <p>Southampton need to get the ball forward.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90+1 mins</div>
+            <span class="di db-ns">90+1 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -343,10 +378,10 @@
             <p>Is there a twist left in this match? Can Southampton reply as they did early in the match?</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>90 mins</div>
+            <span class="di db-ns">90 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -356,10 +391,10 @@
             <p>FOUR ADDED ON.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>89 mins</div>
+            <span class="di db-ns">89 mins</span>
           </time>
           <div class="bb b--moon-gray pb3">
             <header>
@@ -372,11 +407,11 @@
             <p>One minute left.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>13:16</div>
-            <div>26 Feb</div>
+            <span class="di db-ns">13:16</span>
+            <span class="di db-ns">26 Feb</span>
           </time>
           <div class="pb3">
             <header>
@@ -395,10 +430,10 @@
             </p>
           </div>
         </article>
-        <article class="grid post ph3 pt4 bg-lightest-blue">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4 bg-lightest-blue">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>89 mins</div>
+            <span class="di db-ns">89 mins</span>
           </time>
           <div class="pb3">
             <header>
@@ -423,10 +458,10 @@
             </p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>86 mins</div>
+            <span class="di db-ns">86 mins</span>
           </time>
           <div class="pb3 bb b--moon-gray">
             <header>
@@ -435,10 +470,10 @@
             <p>United break to the other end...</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>86 mins</div>
+            <span class="di db-ns">86 mins</span>
           </time>
           <div class="pb3 bb b--moon-gray">
             <header>
@@ -450,10 +485,10 @@
             <p>From the resulting corner, Zlatan Ibrahimovic heads Jack Stephens's effort off the line.</p>
           </div>
         </article>
-        <article class="grid post ph3 pt4">
-          <time class="f6 tr">
+        <article class="grid-ns post ph3 pt4">
+          <time class="f6 tr-ns mb3 mb0-ns db">
             <span class="clip">Posted at</span>
-            <div>85 mins</div>
+            <span class="di db-ns">85 mins</span>
           </time>
           <div class="pb3">
             <header>
@@ -463,14 +498,15 @@
             <p>The bib is off.</p>
           </div>
         </article>
-        <div  class="grid post ph3 pt4">
-          <button class="ho1 f6 bg-green pv2 bt-0 bl-0 br-0 b bw1 white bb b--dark-green grow pointer">Show more updates</button>
+        <div class="grid-ns post ph3 pt4">
+          <button class="ho1 w-100 f6 bg-green pv2 bt-0 bl-0 br-0 b bw1 white bb b--dark-green grow pointer">Show more updates</button>
         </div>
       </section>
 
-      <div class="a-🗂 a-📊-xl bg-white ph3 nt5-l z-1">
-        <aside class="mb5">
-          <h2 class="fw4 f4">Match Stats</h2>
+      <!-- Stats -->
+      <aside class="a-📋 a-📊-xl bg-white ph3 pt3 pt0-xl nt5-xl z-1" id="js-stats"
+        aria-labelledby="tab-match-stats" role="tabpanel">
+          <h2 class="fw4 f4 dn db-xl">Match Stats</h2>
           <div class="flex items-center justify-center">
             <span class="clip">Home Team</span><span class="w1 h1 dib bg-dark-blue mr2"></span>
             <span class="mr3">Man Utd</span>
@@ -535,40 +571,44 @@
           </dl>
         </aside>
 
-        <aside aria-labelledby="lx-football-team-lineups" role="complementary">
-        	<h2 id="lx-football-team-lineups" class="mt0 fw4 f4">Line-ups</h2>
-  				<h3 class="mt0 mb3 f4">Man Utd</h3>
-  				<ul class="list pl0">
-  					<li class="pa2 bb b--moon-gray flex items-center">
+      <!-- line-ups -->
+      <aside class="a-📋 a-🤼-xl bg-white ph3 pt3 pt5-xl z-1 flex flex-wrap content-start"
+        id="js-line-ups"
+        aria-labelledby="tab-line-ups" role="tabpanel">
+        <h2 id="lx-football-team-lineups" class="mt0 fw4 f4 dn db-xl">Line-ups</h2>
+        <div class="flex-auto mr3">
+          <h3 class="mt0 mb3 f4">Man Utd</h3>
+          <ul class="list pl0">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">1</b>
               <abbr title="David de Gea">de Gea</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">25</b>
               <abbr title="A Valencia">A Valencia</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">3</b>
               <abbr title="Eric Bailly">Bailly</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">12</b>
               <abbr title="Chris Smalling">Smalling</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">5</b>
               <abbr title="Marcos Rojo">Rojo</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">21</b>
               <abbr title="Ander Herrera">Herrera</abbr>
               <span class="clip">Booked at 24mins</span>
               <svg width="1em" height="1em" class="dib yellow ml2 f5 rot"><use xlink:href="#card"/></svg>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">6</b><abbr title="Paul Pogba">Pogba</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">8</b>
               <abbr title="Juan Mata">Mata</abbr>
               <span class="clip">Substituted for</span>
@@ -576,7 +616,7 @@
               <abbr title="Michael Carrick" class="mr1">Carrick</abbr>
               <span class="clip">at</span>45'<span class="clip">minutes</span>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">14</b>
               <abbr title="Jesse Lingard">Lingard</abbr>
               <span class="clip">Booked at 41mins</span>
@@ -586,7 +626,7 @@
               <abbr title="Marcus Rashford" class="mr1">Rashford</abbr>
               <span class="clip">at</span>77'<span class="clip">minutes</span>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">11</b>
               <abbr title="Anthony Martial">Martial</abbr>
               <span class="clip">Substituted for</span>
@@ -594,78 +634,79 @@
               <abbr title="Marouane Fellaini" class="mr1">Fellaini</abbr>
               <span class="clip">at</span>90'<span class="clip">minutes</span>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">9</b>
               <abbr title="Zlatan Ibrahimovic">Ibrahimovic</abbr>
             </li>
-  				</ul>
-  				<h4 class="fw4 f4 mb3">Substitutes</h4>
-  				<ul class="list pl0 mb4">
-  					<li class="pa2 bb b--moon-gray flex items-center">
+          </ul>
+          <h4 class="fw4 f4 mb3">Substitutes</h4>
+          <ul class="list pl0 mb4">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">10</b>
               <abbr title="Wayne Rooney">Rooney</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">16</b>
               <abbr title="Michael Carrick">Carrick</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">17</b>
               <abbr title="Daley Blind">Blind</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">18</b>
               <abbr title="Ashley Young">Young</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">19</b>
               <abbr title="Marcus Rashford">Rashford</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">20</b>
               <abbr title="Sergio Romero">Romero</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">27</b>
               <abbr title="Marouane Fellaini">Fellaini</abbr>
             </li>
-  				</ul>
-
-  				<h3 class="mt0 mb3 f4">Southampton</h3>
-  				<ul class="list pl0">
-  					<li class="pa2 bb b--moon-gray flex items-center">
+          </ul>
+        </div>
+        <div class="flex-auto mb5">
+          <h3 class="mt0 mb3 f4">Southampton</h3>
+          <ul class="list pl0">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">1</b>
               <abbr title="Fraser Forster">Forster</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">2</b>
               <abbr title="Cédric Soares">Soares</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">24</b>
               <abbr title="Jack Stephens">Stephens</abbr>
               <span class="clip">Booked at 40mins</span>
               <svg width="1em" height="1em" class="dib yellow ml2 f5 rot"><use xlink:href="#card"/></svg>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">3</b>
               <abbr title="Maya Yoshida">Yoshida</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">21</b>
               <abbr title="Ryan Bertrand">Bertrand</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">16</b>
               <abbr title="James Ward-Prowse">Ward-Prowse</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">14</b>
               <abbr title="Oriol Romeu">Romeu</abbr>
               <span class="clip">Booked at 18mins</span>
               <svg width="1em" height="1em" class="dib yellow ml2 f5 rot"><use xlink:href="#card"/></svg>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">8</b>
               <abbr title="Steven Davis">Davis</abbr>
               <span class="clip">Substituted for</span>
@@ -673,13 +714,13 @@
               <abbr title="Jay Rodriguez" class="mr1">Rodriguez</abbr>
               <span class="clip">at</span>90'<span class="clip">minutes</span>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">22</b>
               <abbr title="Nathan Redmond">Redmond</abbr>
               <span class="clip">Booked at 56mins</span>
               <svg width="1em" height="1em" class="dib yellow ml2 f5 rot"><use xlink:href="#card"/></svg>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">11</b>
               <abbr title="Dusan Tadic">Tadic</abbr>
               <span class="clip">Substituted for</span>
@@ -687,7 +728,7 @@
               <abbr title="Sofiane Boufal" class="mr1">Boufal</abbr>
               <span class="clip">at</span>77'<span class="clip">minutes</span>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">20</b>
               <abbr title="Manolo Gabbiadini">Gabbiadini</abbr>
               <span class="clip">Substituted for</span>
@@ -695,50 +736,86 @@
               <abbr title="Shane Long" class="mr1">Long</abbr>
               <span class="clip">at</span>83'<span class="clip">minutes</span>
             </li>
-  				</ul>
-  				<h4 class="fw4 f4 mb3">Substitutes</h4>
-  				<ul class="list pl0 mb4">
-  					<li class="pa2 bb b--moon-gray flex items-center">
+          </ul>
+          <h4 class="fw4 f4 mb3">Substitutes</h4>
+          <ul class="list pl0 mb0">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">7</b>
               <abbr title="Shane Long">Long</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">9</b>
               <abbr title="Jay Rodriguez">Rodriguez</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">12</b>
               <abbr title="Martín Cáceres">Cáceres</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">19</b>
               <abbr title="Sofiane Boufal">Boufal</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">23</b>
               <abbr title="Pierre-Emile Højbjerg">Højbjerg</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">38</b>
               <abbr title="Sam McQueen">McQueen</abbr>
             </li>
-  					<li class="pa2 bb b--moon-gray flex items-center">
+            <li class="pa2 bb b--moon-gray flex items-center">
               <b class="w2 dib">40</b>
               <abbr title="Mouez Hassen">Hassen</abbr>
             </li>
-  				</ul>
-          <div class="lh-copy">
-						<dl class="mv0">
-							<dt class="dib b">Referee:</dt>
-							<dd class="dib ml0">Andre Marriner</dd>
-						</dl>
-						<dl class="mv0">
-							<dt class="dib b">Attendance:</dt>
-							<dd class="dib ml0">85,264</dd>
-						</dl>
-          </div>
-        </aside>
-      </div>
+          </ul>
+        </div>
+        <div class="lh-copy w-100">
+          <dl class="mv0">
+            <dt class="dib b">Referee:</dt>
+            <dd class="dib ml0">Andre Marriner</dd>
+          </dl>
+          <dl class="mv0">
+            <dt class="dib b">Attendance:</dt>
+            <dd class="dib ml0">85,264</dd>
+          </dl>
+        </div>
+      </aside>
     </main>
+
+    <script>
+      var tabs = [];
+
+      window.onload = function init() {
+        tabs = [{
+          id: 'tab-live-reporting',
+          node: document.querySelector('#js-reporting'),
+          btn: document.querySelector('#js-reporting-btn'),
+        }, {
+          id: 'tab-match-stats',
+          node: document.querySelector('#js-stats'),
+          btn: document.querySelector('#js-stats-btn'),
+        }, {
+          id: 'tab-line-ups',
+          node: document.querySelector('#js-line-ups'),
+          btn: document.querySelector('#js-line-ups-btn'),
+        }];
+      };
+
+      function activateTab(type) {
+        tabs.forEach(function updateTab(tab) {
+          if (tab.id === type) {
+            tab.node.classList.remove('z-1');
+            tab.node.classList.add('z-2');
+            tab.btn.classList.remove('bg-light-gray', 'bt-0');
+            tab.btn.classList.add('bg-white', 'bt', 'bw2', 'b--blue');
+          } else {
+            tab.node.classList.remove('z-2');
+            tab.node.classList.add('z-1');
+            tab.btn.classList.remove('bg-white', 'bt', 'bw2', 'b--blue');
+            tab.btn.classList.add('bg-light-gray', 'bt-0');
+          }
+        });
+      }
+    </script>
   </body>
 </html>
