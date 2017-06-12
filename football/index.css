@@ -4,24 +4,40 @@
 .matchday {
   grid-column-gap: 1rem;
   /*grid-template-columns: 1fr repeat(4, 18rem) 1fr;*/
-  grid-template-columns: 1fr 18rem 20rem 20rem 18rem 1fr;
+  grid-template-columns: 1fr 18rem 40rem 18rem 1fr;
   grid-template-areas:
-    "⛵ ⛵ ⛵ ⛵ ⛵ ⛵"
-    "👀 👀 👀 👀 👀 👀"
-    "🎩 🎩 🎩 🎩 🎩 🎩"
-    ". 📝 📻 📻 📊 .";
+    "⛵ ⛵ ⛵ ⛵ ⛵"
+    "⚽️ ⚽️ ⚽️ ⚽️ ⚽️"
+    "🖼 🖼 🖼 🖼 🖼"
+    ".  👀 📻 📊  .";
 }
-.content-measure { width: 75rem; }
+.content-measure { width: 78rem; }
 
 /**
  * areas
  */
 .a-⛵ { grid-area: ⛵; }
+.a-⚽️ { grid-area: ⚽️; }
+.a-🖼 { grid-area: 🖼; }
 .a-👀 { grid-area: 👀; }
-.a-🎩 { grid-area: 🎩; }
-.a-📝 { grid-area: 📝; }
 .a-📻 { grid-area: 📻; }
 .a-📊 { grid-area: 📊; }
+
+@media screen and (min-width: 30em) {
+  .a-📊-ns { grid-area: 📊; }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .a-📊-m { grid-area: 📊; }
+}
+
+@media screen and (min-width: 60em) and (max-width: 60em) {
+  .a-📊-l { grid-area: 📊; }
+}
+
+@media screen and (min-width: 78rem) {
+  .a-📊-xl { grid-area: 📊; }
+}
 
 
 /**
@@ -50,6 +66,7 @@ abbr[title] { text-decoration: none; }
 .j-self-center { justify-self: center; }
 .list--square { list-style-type: square; }
 .sticky { position: sticky; }
+.rot { transform: rotate(10deg); transform-origin: 50% 50%; }
 
 /**
  * Offsets
