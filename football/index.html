@@ -49,7 +49,7 @@
         <abbr title="Southampton" class="self-center f4 f3-ns">Southampton</abbr>
 
         <!-- Home info -->
-        <ul class="ph0 mv0 list j-self-end f6 tr">
+        <ul class="ph0 mv0 list j-self-end f7 f6-ns tr">
           <li class="dib">
             Ibrahimovic
             (19'<span class="clip"> minutes</span>,
@@ -69,7 +69,7 @@
           </div>
         </div>
         <!-- Away info -->
-        <ul class="ph0 mv0 list f6">
+        <ul class="ph0 mv0 list f7 f6-ns">
           <li class="dib">
             Gabbiadini
             (45'+1<span class="clip"> minutes</span>,
@@ -83,7 +83,7 @@
         style="background-image: url('../img/united.jpg');">
 
         <div class="a-🎩 content-measure center ho1 white flex items-end ph3 ph0-l pb5-l">
-          <div class="z-1 pa4 nl3 nr3 bg-near-black bg-transparent-ns">
+          <div class="z-1 pv4 ph3 nl3 nr3 bg-near-black bg-transparent-ns">
             <h1 class="mt0 mb2 w-80-l f3 f2-ns lh-title">EFL Cup final: Reaction as Ibrahimovic breaks Saints hearts</h1>
             <div class="flex items-center">
               <svg viewBox="0 0 32 32" width="1em" height="1em" fill="currentColor" class="dib mr2 f7">
@@ -113,7 +113,7 @@
       </aside>
 
       <!-- Tab Navigation for when content is collapsed -->
-      <section class="a-📋 dn-xl nt5-l z-1 lh-copy">
+      <section class="a-🗂 a-📋-l a-📋-xl bg-near-white bg-transparent-l dn-xl nt5-l z-1 lh-title">
         <ul role="tablist" class="list pl0 mv0 flex">
           <li role="presentation" class="flex-auto mr2">
             <button role="tab" aria-selected="true" aria-controls="tab-live-reporting" tabindex="0"
@@ -127,7 +127,7 @@
             <button role="tab" aria-selected="false" aria-controls="tab-match-stats" tabindex="-1"
               onclick="activateTab('tab-match-stats')"
               id="js-stats-btn"
-              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-light-gray bt-0">
+              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-moon-gray bt-0">
               Match Stats
             </button>
           </li>
@@ -135,7 +135,7 @@
             <button role="tab" aria-selected="false" aria-controls="tab-line-ups" tabindex="-1"
               onclick="activateTab('tab-line-ups')"
               id="js-line-ups-btn"
-              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-light-gray bt-0">
+              class="f6 underline-hover pa0 dark-gray bl-0 br-0 bb-0 w-100 h3 b pointer bg-moon-gray bt-0">
               Line-ups
             </button>
           </li>
@@ -806,13 +806,13 @@
           if (tab.id === type) {
             tab.node.classList.remove('z-1');
             tab.node.classList.add('z-2');
-            tab.btn.classList.remove('bg-light-gray', 'bt-0');
+            tab.btn.classList.remove('bg-moon-gray', 'bt-0');
             tab.btn.classList.add('bg-white', 'bt', 'bw2', 'b--blue');
           } else {
             tab.node.classList.remove('z-2');
             tab.node.classList.add('z-1');
             tab.btn.classList.remove('bg-white', 'bt', 'bw2', 'b--blue');
-            tab.btn.classList.add('bg-light-gray', 'bt-0');
+            tab.btn.classList.add('bg-moon-gray', 'bt-0');
           }
         });
       }

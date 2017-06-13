@@ -51,6 +51,7 @@
 .a-📻 { grid-area: 📻; }
 .a-📊 { grid-area: 📊; }
 .a-🤼 { grid-area: 🤼; }
+.a-🗂 { grid-area: 🗂; }
 .a-📋 { grid-area: 📋; }
 
 @media screen and (min-width: 30em) { .a-📋-ns { grid-area: 📋; } }
@@ -103,7 +104,10 @@ abbr[title] { text-decoration: none; }
   .bg-transparent-ns { background-color: transparent; }
   .grid-ns { display: grid; }
 }
-@media screen and (min-width: 60em) and (max-width: 80em) { .sticky-l { position: sticky; } }
+@media screen and (min-width: 60em) and (max-width: 80em) {
+  .sticky-l { position: sticky; }
+  .bg-transparent-l { background-color: transparent; }
+}
 @media screen and (min-width: 80em)  {
   .sticky-xl { position: sticky; }
   .nt5-xl { margin-top: -4rem; }
