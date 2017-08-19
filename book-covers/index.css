@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+}
+
+.📓 {
+  width: 100vw;
+  height: calc(100vw * 6 / 4);
+  max-width: 38rem;
+  max-height: 57rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.📘 {
+  width: 100vw;
+  height: calc(100vw * 1.2);
+  max-width: 38rem;
+  max-height: 45.6rem;
+}
+
+.📕 {
+  width: 100vw;
+  height: calc(100vw * 1.658);
+  max-width: 38rem;
+  max-height: 63.004rem;
+}
+
+.📙 {
+  width: 100vw;
+  height: calc(100vw * 1.68);
+  max-width: 38rem;
+  max-height: 63.84rem;
+}
+
+.📙-circles {
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.full-justify {
+  text-align: justify;
+}
+.full-justify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.aspect-ratio--3x1 {
+  padding-bottom: 33%;
+}
+
+/**
+ * Col and row spans
+ */
+.col-start-1 {
+  grid-column-start: 1;
+}
+.row-start-1 {
+  grid-row-start: 1;
+}
+.col-start-2 {
+  grid-column-start: 2;
+}
+.row-start-2 {
+  grid-row-start: 2;
+}
+
+.wide-1 {
+  grid-column-end: span 1;
+}
+.wide-2 {
+  grid-column-end: span 2;
+}
+
+.tall-1 {
+  grid-row-end: span 1;
+}
+.tall-2 {
+  grid-row-end: span 2;
+}
